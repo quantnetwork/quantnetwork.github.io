@@ -2,15 +2,14 @@
 title: 1 - Deployment and Functions
 parent: Tutorials
 layout: page
+nav_order: 1
 ---
-
 # Deployment and Functions
-
 This series of tutorials aim to introduce concepts and features of Quant Flow by guiding the reader through implementing small projects in the [sandbox] environment. Each tutorial gradually makes use of new concepts to showcase their functionality in a hands-on approach.
 
 This first tutorial will guide you through using the sandbox to automate a daily transfer between two [accounts](). We will go step by step through how to write, upload and deploy a script, and create the automation to make use of it.
 
-Concepts:
+**Concepts**:
 
 - [automation]()
 - [language reference]()
