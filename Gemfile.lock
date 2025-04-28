@@ -91,7 +91,8 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll (~> 4.4.1)
-  just-the-docs
+  jekyll-sass-converter
+  just-the-docs (= 0.10.1)
 
 BUNDLED WITH
    2.5.9
