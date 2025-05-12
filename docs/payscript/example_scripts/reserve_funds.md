@@ -1,5 +1,5 @@
 ---
-title: Functions
+title: Reserve Funds
 parent: Example Scripts
 layout: page
 ---
