@@ -5,7 +5,6 @@ layout: page
 ---
 
 
-
 ```groovy
 trigger="on_demand";
 
