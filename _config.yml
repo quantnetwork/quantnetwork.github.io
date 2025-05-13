@@ -8,8 +8,8 @@ url: https://just-the-docs.github.io
 
 aux_links:
   Quant: https://quant.network/
-  Flow: https://quant.network/quant-flow/
-  Sandbox: 
+  Quant Flow: https://quant.network/quant-flow/
+  Sandbox: https://programmable-payments.payments.quantnetwork.net
 
 
 favicon_ico: "/assets/images/favicon.ico"
