@@ -5,4 +5,14 @@ nav_order: 3
 ---
 
 # Sandbox
-A UI provided to allow teams implementing Quant Flow to play the role of their customers in viewing a simulated bank account, setting up and managing automations, reserves and consents on their account as well as viewing the changes made once an automation has been executed.
+The Quant Flow programmable payments Sandbox is an environment to validate business cases by allowing customers to explore Payscript. It allows accelerated innovation through a risk-free environment for quick iteration, trial and learning.
+
+## Core Features:
+- Account and Customer journeys
+- API endpoints and webhooks for U.I.
+- Complete Banking Simulator
+- User Access Control
+- Customer experience simulation U.I.
+- Fully standalone SaaS environment
+- PayScript templates
+- Technical support
