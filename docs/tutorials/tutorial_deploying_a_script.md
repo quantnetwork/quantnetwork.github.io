@@ -91,6 +91,11 @@ Fill in the details to be used in the automation:
     <img src="/assets/images/tutorial1/created_automation.png" width="60%">
 </div>
 
+After selecting the script, fill the script parameters. Choose a value for the amount. The payer account number and sort code should be those from the customer account who is deploying the script. For the payee choose any other account. 
+
+![alt text](image.png)
+
+
 Now the automation is created! Because its trigger type is "on demand", you can click the green triangle button to run it whenever you wish.
 
 Once run, you will see the transaction it created in the transaction history of the customer's account.
