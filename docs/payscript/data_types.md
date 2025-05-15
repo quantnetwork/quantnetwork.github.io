@@ -20,4 +20,7 @@ A string composed of 6 numerical characters.
 ### To Reserve 
 A string containing the UUID of a reserve.
 
-
+### Scan
+An account identifier composed of the following attributes:
+- String sortCode
+- String accountNumber

@@ -1,13 +1,13 @@
----
-title: 1 - Deploying a script
+<!-- ---
+title: Deploying a script
 parent: Tutorials
 layout: page
-nav_order: 1
----
+nav_order: 2
+--- -->
 
 # Deploying a script
 This tutorial will guide you through deploying and running your first payscript which will allow the customer to move funds to a reserve. 
-We will use the [Sandbox] environment to deploy a script, create an automation and run it.
+We will use the [sandbox](sandbox) environment to deploy a script, create an automation and run it.
 
 ### Prerequisites:
 - Have a Sandbox account
