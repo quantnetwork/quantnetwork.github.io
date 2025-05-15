@@ -5,9 +5,8 @@ layout: page
 nav_order: 4
 ---
 
-
 ## Automation
-An entity created by a [customer] into their bank account. The automation is created from a PayScript from among the ones that have been deployed by [developers]. If the selected payscript uses a trigger type that requires [trigger parameters], those need to be specified as part of creating the automation. If the selected payscript defines [script parameters], those need to be specified as part of creating the automation.
+Automations are features powered by one or more PayScripts, which a [customer] can enable in their bank account. If the selected payscript uses a trigger type that requires [trigger parameters](), those need to be specified as part of creating the automation. If the selected payscript defines [script parameters], those need to be specified as part of creating the automation.
 
 ## Reserve
 An abstract segregation of funds in a customer's account with a name and a purpose, so that those funds can be considered unavailable for other purposes, effectively reserving them. Funds can be added to and removed from the reserve by the account owner, or by whoever the account owner has given [consent] to do this.
@@ -21,3 +20,4 @@ Transactions: Allows making transactions on behalf of the owner
 
 [customer]: /docs/quant_flow/personas#customer
 [developers]: /docs/quant_flow/personas#developer
+[trigger parameters]: /docs/payscript/triggers#parameters

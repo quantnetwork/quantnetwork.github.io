@@ -7,7 +7,6 @@ layout: page
 ```groovy
 trigger = "on_demand";
 
-
 def payer  = ${payer:scan};
 def payee = ${payee:scan};
 def amount = ${amount:decimal};
