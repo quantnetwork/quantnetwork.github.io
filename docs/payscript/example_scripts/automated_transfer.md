@@ -4,28 +4,13 @@ parent: Example Scripts
 layout: page
 ---
 
-```groovy
-trigger = "on_demand";
+# Automated Transfer
+This script makes a transfer on demand.
 
-def payer  = ${payer:scan};
-def payee = ${payee:scan};
-def amount = ${amount:decimal};
+<div style="text-align: center;" markdown="1">
+[Download](automatedTransfer.groovy){: .btn }
+</div>
 
-def payment = PaymentInfo.builder()
-        .payer(AccountInfo.builder()
-                .type(AccountIdentifierType.SCAN)
-                .identifier(payer)
-                .build())
-        .payee(AccountInfo.builder()
-                .type(AccountIdentifierType.SCAN)
-                .identifier(payee)
-                .build())
-        .amountInfo(AmountInfo.builder()
-                .currency(CurrencyEnum.GBP)
-                .amount(amount)
-                .build())
-        .paymentReference("Automated transfer")
-        .build();
-
-def newPaymentId = createPayment(payment);
-```
+{% highlight groovy %}
+{% include_relative automatedTransfer.groovy %}
+{% endhighlight %}

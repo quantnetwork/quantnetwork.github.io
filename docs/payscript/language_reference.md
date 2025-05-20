@@ -12,7 +12,7 @@ For Syntax, this version does not differ from Groovy. please consult the [Groovy
 
 
 ### Script Structure
-PayScript has two special structures, beyond the programming logic; A [trigger] definition and [script parameters]. The trigger specifies what type of event will cause the script to run. When an automation is created with the script, the parameters of the trigger will be specified. For example, if the script's trigger type is "time", the parameters would be which date and time it should run on.
+PayScript has two special structures, beyond the programming logic; A [trigger] definition and script parameters. The trigger specifies what type of event will cause the script to run. When an automation is created with the script, the parameters of the trigger will be specified. For example, if the script's trigger type is "time", the parameters would be which date and time it should run on.
 Also during the creation of the automation, the script parameters required by the script will be supplied.
 
 
@@ -21,10 +21,10 @@ The script parameters are values which will be used by the script but will be sp
 Parameters are specified in the script using the following syntax:
 
 ```groovy
-"${[parameter name]}"
+"${PARAMETER_NAME}"
 ```
 
-Where [parameter name] is to be replaced with the name of the parameter, as will be shown to the user during the creation of an automation using this script.
+Where PARAMETER_NAME is to be replaced with the name of the parameter, as will be shown to the user during the creation of an automation using this script.
 
 
 ## Logic
@@ -32,21 +32,20 @@ The logic section contains what the script needs to accomplish, utilizing groovy
 
 
 ## Concepts
+These are the Quant Flow concepts as how they're implemented by PayScript.
 
 ### Automation
-Automations are features powered by one or more PayScripts, which a [customer] can enable in their bank account. If the selected payscript uses a trigger type that requires [trigger parameters](), those need to be specified as part of creating the automation. If the selected payscript defines [script parameters], those need to be specified as part of creating the automation.
+Automations are features powered by one or more PayScripts, which a [customer] can enable in their bank account. If the selected payscript uses a trigger type that requires [trigger parameters][trigger], those need to be specified as part of creating the automation. If the selected payscript defines script parameters, those need to be specified as part of creating the automation.
 
 ### Reserve
-An abstract segregation of funds in a customer's account with a name and a purpose, so that those funds can be considered unavailable for other purposes, effectively reserving them. Funds can be added to and removed from the reserve by the account owner, or by whoever the account owner has given [consent] to do this.
+An abstract segregation of funds in a customer's account with a name and a purpose, so that those funds can be considered unavailable for other purposes, effectively reserving them. Funds can be added to and removed from the reserve by the account owner, or by whoever the account owner has given consent to do this.
 
 ### Consent
-Consent is given by a [customer] to another customer perform specific actions on their accounts. The types of consent that can be given are:
-Fund check: Allows checking if the owner has more available funds than a given amount
-Automations: 
-Balance: Allows seeing the balance of the owner
-Transactions: Allows making transactions on behalf of the owner
-
-
+Consent is given by a customer to another customer perform specific actions on their accounts. The types of consent that can be given are:<br>
+**Fund check**: Allows checking if the owner has more available funds than a given amount<br>
+**Automations**: Allows triggering automations owned by the consenting customer<br>
+**Balance**: Allows seeing the balance of the owner<br>
+**Transactions**: Allows making transactions on behalf of the owner<br>
 
 
 [customer]: /docs/quant_flow/personas#customer
@@ -55,5 +54,3 @@ Transactions: Allows making transactions on behalf of the owner
 [built-in functions]: built_in_functions
 [callScript]: built_in_functions#callScript
 [trigger]: /docs/payscript/triggers
-[script parameters]: #parameters
-[trigger parameters]: /docs/payscript/triggers#parameters

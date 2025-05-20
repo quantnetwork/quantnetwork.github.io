@@ -4,14 +4,13 @@ parent: Example Scripts
 layout: page
 ---
 
+# Reserve Funds
+This script adds an amount of funds to a reserve.
 
-```groovy
-trigger="on_demand";
+<div style="text-align: center;" markdown="1">
+[Download](reserveFunds.groovy){: .btn }
+</div>
 
-def fromAccount = new Scan(${sortCode:string}, ${accountNumber:string});
-def toReserve = ${toReserve:string};
-def amount = ${amount:decimal};
-def reference = ${reference:string?};
-
-addFundsToReserve(fromAccount, toReserve, amount, reference);
-```
+{% highlight groovy %}
+{% include_relative reserveFunds.groovy %}
+{% endhighlight %}

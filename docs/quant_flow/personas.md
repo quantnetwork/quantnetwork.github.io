@@ -1,7 +1,7 @@
 ---
 title: Personas
 layout: page
-nav_order: 1
+nav_order: 2
 parent: Quant Flow
 ---
 
@@ -15,6 +15,8 @@ The financial service provider which has adopted and implemented Quant Flow.
 The professional responsible for developing and managing PayScripts.
 
 ## Customer
-The Bank's end user, utilising the provided financial services powered by Quant Flow. In the Sandbox, customers do this by activating [Automations], while in a real implementation of Quant Flow the features can be made available in different ways.
+The Bank's end user, utilising the provided financial services powered by Quant Flow. In the Sandbox, customers do this by activating Automations, while in a real implementation of Quant Flow the features can be made available in different ways.
+
+[comment]: Once the Concepts page is filled, make the appropriate links here.
 
 [automations]: /docs/sandbox/automations

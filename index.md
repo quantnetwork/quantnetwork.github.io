@@ -25,5 +25,5 @@ The [Payscript Sandbox][sandbox] is a test environment that offers the possibili
 [Payscript]: docs/payscript/language_reference
 [sandbox]: docs/sandbox
 [Tutorial 1: Deploying a script]: docs/tutorials/tutorial1
-[Language Reference]: docs/language_reference
+[Language Reference]: docs/payscript/language_reference
 [Groovy]: https://groovy-lang.org/

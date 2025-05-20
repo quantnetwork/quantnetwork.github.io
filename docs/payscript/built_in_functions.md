@@ -4,8 +4,8 @@ parent: Payscript
 layout: page
 ---
 
-# built in functions
-PayScript offers built-in functions as the interface to interact with banking systems, as well as other utilities. This is the comprehensive list of functions available.
+# Built-in Functions
+PayScript offers built-in functions as the interface to interact with banking systems, as well as other utilities. This is the comprehensive list of functions available, and the data types used in them.
 
 
 ## Account Functions
@@ -66,7 +66,6 @@ Releases the funds from the lock lock with `lockId`
 Return a list of `LockInfo` representing all the locks which belong to the account identified by `accountIdentifier`
 
 
-
 ## Reserve Functions
 
 ## `addFundsToReserve(String fromAccount, String toReserve, decimal amount, String reference)`
@@ -90,7 +89,7 @@ Triggers a script which has trigger type "sub_script", passing `params` as its l
 
 
 # Data Objects
-Data objects are used as parameters in some built-in functions. Their attributes can be accessed by default getters and setters. The data objects can be instantiated through the [builder pattern](). For example:
+Data objects are used as parameters in some built-in functions. Their attributes can be accessed by default getters and setters. The data objects can be instantiated through the builder pattern. For example:
 ```groovy
 def payment = PaymentInfo.builder()
         .payer(AccountInfo.builder()
@@ -125,7 +124,7 @@ def payment = PaymentInfo.builder()
 `Instant updatedAt`:<br>
 
 ## `UpdateReserveInfo`
-Creates an object containing values to use to update a [Reserve]()'s attributes.<br>
+Creates an object containing values to use to update a reserve's attributes. See an [example of reserve update][updateReserve].<br>
 `String reserveId`: The UUID of the existing reserve<br>
 `String name`: The name to be applied with the update<br>
 `Integer priority`: The priority number to be applied with the update<br>
@@ -146,10 +145,23 @@ Creates an object containing values to use to update a [Reserve]()'s attributes.
 `String description`: A descriptive text about the lock<br>
 `String status`: Status of the lock<br>
 
+## `SCAN`
+The account identifiers used within the UK Domestic Banking System.
+`String sortCode`<br>
+`String accountNumber`<br>
 
-See an [example of reserve update][updateReserve.md].
+## `PAN`
+The **P**rimary **A**ccount **N**umber, or Payment Card Number, used as the identifier of payment cards, as defined in [ISO/IEC 7812-1:2017 Identification cards — Identification of issuers](https://www.iso.org/standard/70484.html)<br>
+`String pan`
 
+## `IBAN`
+The **I**nternational **B**ank **A**ccount **N**umber, used as a standard in cross-border payments within participating countries, as defined in [ISO 13616-1:2020 Financial services — International bank account number (IBAN)](https://www.iso.org/standard/81090.html)<br>
+`String iban`
 
-[updateReserve.md]: example_scripts/updateReserve.groovy
-[builder pattern]: https://refactoring.guru/design-patterns/builder
-[reserve]: 
+## `BicSwift`
+The Business Identifier Code (BIC), used in a Swift network as defined in [ISO 9362:2022 Banking — Banking telecommunication messages — Business identifier code (BIC)](https://www.iso.org/standard/84108.html)<br>
+`String bic`
+`String swift`
+
+[updateReserve]: example_scripts/update_reserve
+[reserve]: /docs/quant_flow/concepts#reserve

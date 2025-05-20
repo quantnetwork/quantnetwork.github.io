@@ -15,13 +15,16 @@ Triggers specify which type of event will cause the script to run. They take par
 
 **On Demand**: This will cause the automation to have a button which can be used to run it at any time.
 
-**SubScript**: Runs when it is triggered by a function call in another script. The subscript trigger type does not allow any parameters. The function used for this is [callcript]
+**SubScript**: Runs when it is triggered by a function call in another script. The subscript trigger type does not allow any parameters. The function used for this is [callScript][callScript]
 
 
 Some triggers take parameters.  will only be specified at the time when it is used in the creation of an automation.
 
 The trigger definition follows the syntax:
+```groovy
+trigger="TRIGGER_TYPE";
+```
+where TRIGGER_TYPE is replaced by a trigger type name. <br>
+Example: `trigger="time";`
 
-trigger="[trigger]";
-
-where [trigger] is replaced by a trigger type name. Example: trigger="time";
+[callScript]: built_in_functions.html#object-callscriptstring-scriptid--listmapstring-object-params

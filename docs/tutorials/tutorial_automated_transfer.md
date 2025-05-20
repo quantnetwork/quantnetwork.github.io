@@ -7,7 +7,7 @@ nav_order: 1
 
 # Automated Transfer
 This tutorial will guide you through deploying and running your first payscript which will make a transaction between two customer accounts.
-We will use the [Sandbox][sandbox] environment to deploy a script, create an [automation] and run it.
+We will use the [Sandbox][sandbox] environment to deploy a script, create an automation and run it.
 
 ### Prerequisites:
 - Have a Sandbox account
@@ -43,7 +43,7 @@ def newPaymentId = createPayment(payment);
 ```
 
 On the first line, we define the trigger type; "on_demand" will allow us to run the automation with the click of a button.
-In the next block, the syntax `${name:type}` defines the parameters that will be used in the script, which in this case are the [SCAN] of the payer and the payee, as well as the amount to be payed.
+In the next block, the syntax `${name:type}` defines the parameters that will be used in the script, which in this case are the [SCAN][scan] of the payer and the payee, as well as the amount to be payed.
 Next up is the logic. We use the builder pattern to construct the data structure of the Payment using the parameters, and then we create the payment with that data on the last line.
 
 ## Deployment
@@ -90,10 +90,9 @@ In the next tutorial we will introduce the concept of consent, which will be nec
 
 
 # Next:
-- [2 - Consent]
+- WIP
 
 [2 - Consent]: /docs/tutorials/tutorial2
 
 [sandbox]: /docs/sandbox
-[automation]: /docs/sandbox/automations
-[SCAN]: /docs/payscript/data_types.html#scan
+[scan]: /docs/payscript/built_in_functions#scan
