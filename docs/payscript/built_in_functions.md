@@ -68,25 +68,44 @@ Return a list of `LockInfo` representing all the locks which belong to the accou
 
 ## Reserve Functions
 
-## `addFundsToReserve(String fromAccount, String toReserve, decimal amount, String reference)`
+## `Reserve reserve createReserve(Reserve reserve)`
+Creates a reserve based on the Reserve object provided
+
+## `List<reserveInfo> getAccountReserves(AccountIdentifier accountIdentifier)`
+Gets the list of all account reserves.
+
+## `ReserveInfo reserve getReserveInfo(String reserveId)`
+Get a reserve’s details.
+
+## `UUID reserveTransactionId moveFundsBetweenReserves(String fromReserve, String toReserve,BigDecimal amount, String reference)`
+Move funds from one reserve to another.
+
+## `List<ReserveTransaction> transactions getReserveTransactions(UUID reserveId, ReserveTransactionsFilter filter, Integer offset, Integer limit)`
+Get the list of reserve’s transactions, based on specified filters, ordered by date (latest transactions first in the list)
+
+## `Integer totalTransactions getReserveTransactionsCount(UUID reserveId, ReserveTransactionsFilter filter)`
+Get total number of a reserve’s transactions, based on specified filters
+
+## `UUID reserveTransactionId addFundsToReserve(String fromAccount, String toReserve, decimal amount, String reference)`
 Sets aside an `amount` of funds from the account `fromAccount` into the reserve `toReserve`. The transaction reference used is the text `reference`.
 
-
-## `withdrawFundsFromReserve(fromReserve, toAccount, amount, reference);`
+## `UUID reserveTransactionId withdrawFundsFromReserve(fromReserve, toAccount, amount, reference);`
 Withdraws an `amount` of funds into the account `toAccount` from the reserve `fromReserve`. The transaction reference used is the text `reference`.
 
-## `editReserve(UpdateReserveInfo updateReserveInfo)`
+## `UUID reserveId editReserve(UpdateReserveInfo updateReserveInfo)`
 Applies the update defined in the object [`updateReserveInfo`](#updatereserveinfo).
 
-## `deleteReserve(String reserveId)`
+## `void deleteReserve(UUID reserveId)`
 Deletes the reserve with ID `reserveId`.
 
 
-## Script Functions
+## Utility Functions
 
 ## `Object callScript(String scriptId,  List<Map<String, Object>>... params)`
 Triggers a script which has trigger type "sub_script", passing `params` as its list of map of parameter names to parameters.
 
+## `void logMessage(String message)`
+Logs the messages inside the script
 
 # Data Objects
 Data objects are used as parameters in some built-in functions. Their attributes can be accessed by default getters and setters. The data objects can be instantiated through the builder pattern. For example:
@@ -109,11 +128,13 @@ def payment = PaymentInfo.builder()
 ```
 
 ## `BalanceInfo`
+Attributes:<br>
 `BigDecimal totalBalance`: A total balance of funds in an account, which includes funds in locks and reserves.<br>
 `BigDecimal availableBalance`: The balance of funds in an account which is not committed to locks or reserves.<br>
 
 
 ## `PaymentInfo`
+Attributes:<br>
 `UUID id`: The unique identifier of the payment<br>
 `AccountInfo  payer`: The account providing funds<br>
 `AccountInfo  payee`: The account receiving funds<br>
@@ -125,6 +146,7 @@ def payment = PaymentInfo.builder()
 
 ## `UpdateReserveInfo`
 Creates an object containing values to use to update a reserve's attributes. See an [example of reserve update][updateReserve].<br>
+Attributes:<br>
 `String reserveId`: The UUID of the existing reserve<br>
 `String name`: The name to be applied with the update<br>
 `Integer priority`: The priority number to be applied with the update<br>
@@ -132,36 +154,71 @@ Creates an object containing values to use to update a reserve's attributes. See
 `String description`: The description to be applied with the update<br>
 
 ## `GetAmountInfoResponse`
+Attributes:<br>
 `Amount totalBalance`<br>
 `Amount availableBalance`<br>
 
-## `Lock`
+## `LockInfo`
+Attributes:<br>
 `UUID lockId`: The global ID of the lock<br>
-`Instant createdAt`: The Instant representing the time at which the Lock was created<br>
+`OffsetDateTime createdAt`: The Instant representing the time at which the Lock was created<br>
 `BigDecimal amount`: The amount of funds that are locked by this Lock<br>
 `String currency`: The currency of the funds locked by this lock<br>
 `UUID to`: Whom the funds locked by this lock have been locked to<br>
-`Instant expiryDate`: An Instant representing the time from which the lock will expire<br>
+`OffsetDateTime expiryDate`: An Instant representing the time from which the lock will expire<br>
 `String description`: A descriptive text about the lock<br>
 `String status`: Status of the lock<br>
 
 ## `SCAN`
 The account identifiers used within the UK Domestic Banking System.
+Attributes:<br>
 `String sortCode`<br>
 `String accountNumber`<br>
 
 ## `PAN`
 The **P**rimary **A**ccount **N**umber, or Payment Card Number, used as the identifier of payment cards, as defined in [ISO/IEC 7812-1:2017 Identification cards — Identification of issuers](https://www.iso.org/standard/70484.html)<br>
+Attributes:<br>
 `String pan`
 
 ## `IBAN`
 The **I**nternational **B**ank **A**ccount **N**umber, used as a standard in cross-border payments within participating countries, as defined in [ISO 13616-1:2020 Financial services — International bank account number (IBAN)](https://www.iso.org/standard/81090.html)<br>
+Attributes:<br>
 `String iban`
 
 ## `BicSwift`
 The Business Identifier Code (BIC), used in a Swift network as defined in [ISO 9362:2022 Banking — Banking telecommunication messages — Business identifier code (BIC)](https://www.iso.org/standard/84108.html)<br>
+Attributes:<br>
 `String bic`
 `String swift`
+
+## `RelatedAccountInfo`
+Attributes:<br>
+`AccountIdentifier accountIdentifier`
+`AccountIdentifierType type`
+
+## `AccountIdentifierType`
+Enum values:<br>
+`{ SCAN,IBAN,PAN, BICSWIFT}`
+
+## `ConsentStatus`
+Enum values:<br>
+`{GIVEN, NOT_GIVEN, REQUESTED }`
+
+## `LockStatus`
+Enum values:<br>
+`{ACTIVE, PROCESSING, RELEASE_FAILED}`
+
+## `AmountInfo`
+`Enum currency`
+`Bigdecimal amount`
+
+## `Reserve`
+Attributes:<br>
+`AccountIdentifier accountIdentifier`
+`String name`
+`Integer priority`
+`BigDecimal savingGoal`
+`String description`
 
 [updateReserve]: example_scripts/update_reserve
 [reserve]: /docs/quant_flow/concepts#reserve
