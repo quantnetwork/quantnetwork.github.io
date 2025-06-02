@@ -32,8 +32,8 @@ Retrieve consent status for a particular account.
 
 ## Payment Functions
 
-## `UUID createPayment(String payerAccountNumber, String payeeAccountNumber, BigDecimal amount, String purpose)`
-Makes a payment between two accounts.
+## `String createPayment(PaymentInfo paymentInfo)`
+Creates a payment based on `paymentInfo`.
 
 ## `UUID requestPayment(String payerAccountNumber, String payeeAccountNumber, BigDecimal amount, String purpose)`
 Sends a payment request from one account to another.
@@ -43,9 +43,6 @@ Retrieve payment information for payment with `paymentId`.
 
 ## `UUID requestPayment(PaymentInfo paymentInfo)`
 Sends a request for `paymentInfo`.
-
-## `String createPayment(PaymentInfo paymentInfo)`
-Creates a payment based on `paymentInfo`.
 
 
 ## Lock Functions
