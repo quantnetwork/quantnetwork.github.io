@@ -56,12 +56,22 @@ This [built-in function][builtinfunction] is responsible for obtaining the balan
 Importantly, the `getBalance` function requires **consent** to be given, from the account whose balance is being checked, to the account running the automation trying to check the balance. If the automation tries to run, and consent has not been granted, the run will fail and the error will be logged.
 
 ## Requesting and Granting Consent
-To request consent during the creation of an Automation, click the `Manage Consent` button. In the newly displayed area you will be able to select another account holder, and the types of consent, and then submit the request with the `Request` button.
+To request consent during the creation of an Automation, click the `Manage Consent` button. 
 
 <div style="text-align: center;">
     <img src="/assets/images/tutorial0/manage_consent.png" width="90%">
 </div>
 
+In the newly displayed area you will be able to select another account holder, and the types of consent, and then submit the request with the `Request` button.
+
+Then, navigating to the user whose consent you requested, you will see the request in the consents given tab, and be able to give it.
+
+<div style="text-align: center;">
+    <img src="/assets/images/tutorial0/customer_consent_page.png" width="90%">
+</div>
+
+After this, you can run the automation and see the desired effects.
 
 
 [builtinfunction]: /docs/payscript/built_in_functions
+[sandbox]: /docs/sandbox
