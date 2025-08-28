@@ -90,9 +90,9 @@ In the next tutorial we will introduce the concept of consent, which will be nec
 
 
 # Next:
-- WIP
+- [Top-up]
 
-[2 - Consent]: /docs/tutorials/tutorial2
+[Top-up]: /docs/tutorials/tutorial_topup
 
 [sandbox]: /docs/sandbox
 [scan]: /docs/payscript/built_in_functions#scan

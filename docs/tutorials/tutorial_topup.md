@@ -5,7 +5,7 @@ layout: page
 nav_order: 3
 ---
 
-# Automated Transfer
+# Top-Up
 This tutorial will introduce the concept of Consent, guiding you through the example case of a parent setting up an automation to top up their child's account at the end of the month. We will use the [Sandbox][sandbox] environment to create an automation and run it.
 
 ### Prerequisites:
@@ -71,6 +71,11 @@ Then, navigating to the user whose consent you requested, you will see the reque
 </div>
 
 After this, you can run the automation and see the desired effects.
+
+# Next:
+- [Reserves]
+
+[Reserves]: /docs/tutorials/tutorial_reserves
 
 
 [builtinfunction]: /docs/payscript/built_in_functions
