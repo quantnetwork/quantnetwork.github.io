@@ -1,4 +1,4 @@
-title: Quant Flow Doc
+title: Quant Flow Docs
 description: The comprehensive documentation for Quant Flow, Payscript and the Sandbox.
 theme: just-the-docs
 
@@ -9,6 +9,7 @@ url: https://just-the-docs.github.io
 aux_links:
   Quant: https://quant.network/
   Quant Flow: https://quant.network/quant-flow/
+  Sandbox: https://programmable-payments.payments.quantnetwork.net
 
 
 favicon_ico: "/assets/images/favicon.ico"
