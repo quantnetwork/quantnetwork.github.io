@@ -4,7 +4,7 @@ def account_parent = ${account_parent:scan};
 def account_child = ${account_child:scan};
 def topUpGoal = ${topUpGoal:decimal};
 
-balance = getBalance(account_child);
+balance = getBalance(account_child).getAvailableBalance();
 
 if (balance < topUpGoal) {
     def payment = PaymentInfo.builder()
