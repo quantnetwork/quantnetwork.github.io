@@ -12,7 +12,3 @@ Reserves are an abstract segregation of funds that can be used to help manage an
 <div style="text-align: center;">
     <img src="/assets/images/tutorial3/reserves.png" width="90%">
 </div>
-
-{% highlight groovy %}
-{% include payscript/example_scripts/tax_optimisation.groovy %}
-{% endhighlight %}

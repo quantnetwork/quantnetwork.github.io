@@ -21,7 +21,7 @@ trigger = "time";
 def account_parent = ${account_parent:scan};
 def account_child = ${account_child:scan};
 
-balance = getBalance(account_child);
+balance = getBalance(account_child).getAvailableBalance();
 
 if (balance < 100) {
     def payment = PaymentInfo.builder()
