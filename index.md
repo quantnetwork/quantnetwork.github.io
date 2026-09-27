@@ -17,11 +17,11 @@ The [Payscript Sandbox][sandbox] is a test environment that offers the possibili
 ---
 
 #### Next Steps:
-- [Tutorial 1: Deploying a script]
+- [Tutorial 1: Hello World]
 - [Language Reference]
 
 [Payscript]: docs/payscript/language_reference
 [sandbox]: docs/sandbox
-[Tutorial 1: Deploying a script]: docs/tutorials/tutorial1
+[Tutorial 1: Hello World]: /docs/tutorials/tutorial_hello_world.html
 [Language Reference]: docs/payscript/language_reference
 [Groovy]: https://groovy-lang.org/

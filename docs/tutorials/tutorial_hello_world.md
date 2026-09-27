@@ -7,7 +7,7 @@ nav_order: 1
 
 # Hello World
 Follow these steps to run a simple PayScript to see it print a message to the logs.
-We will use the [sandbox](sandbox) environment to deploy a script, create an automation and run it.
+We will use the [sandbox] environment to deploy a script, create an automation and run it.
 
 ```groovy
 trigger = "on_demand";
